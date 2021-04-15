@@ -145,7 +145,7 @@ class Main extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('guftu'),
+
                           ],
                         )
                       ],
