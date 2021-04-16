@@ -318,6 +318,40 @@ class Main extends StatelessWidget {
                             ),
                           ],
                         ),
+                        Divider(),
+                        SizedBox(
+                          height: 200,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(width: 10,),
+                                Image(
+                                  image: NetworkImage('https://imgix.bustle.com/uploads/image/2018/5/21/f0fbced7-d13a-4900-9da4-fab47eceaeeb-151204_bb_han-solojpgcroppromo-xlarge2.jpg?w=970&h=546&fit=crop&crop=faces&auto=format&q=70'),
+                                ),
+                                SizedBox(width: 10,),
+                                Image(
+                                  image: NetworkImage('https://3.bp.blogspot.com/-YsKAxgt4T3g/U-7erCEZBdI/AAAAAAAAEvM/l96CzkzEGSo/s1600/starwarschewbacca-dan-han-solo-ikon-dalam-film-star-wars094.jpeg'),
+                                ),
+                                SizedBox(width: 10,),
+                                Image(
+                                  image: NetworkImage('https://i.pinimg.com/originals/83/39/38/833938b2349c01fdcf4fab6c431abe42.jpg'),
+                                ),
+                                SizedBox(width: 10,),
+                                Image(
+                                  image: NetworkImage('https://2.bp.blogspot.com/-sJnXoZSF35c/UoBuQWViM5I/AAAAAAAA0eY/Yj7or79m-60/s1600/1-2-star-wars-impero-colpisce-ancora-trivia.jpg'),
+                                ),
+                                SizedBox(width: 10,),
+                                Image(
+                                  image: NetworkImage('https://1.bp.blogspot.com/-GI_hMV08Tck/UoB7Q3k1R_I/AAAAAAAA0kU/VXDDC4zyNOg/s1600/41-1-star-wars-impero-colpisce-ancora-trivia.jpg'),
+                                ),
+                              ],
+                            ),
+                            ]
+                          ),
+                        ),
                       ],
                     ),
                   ),
