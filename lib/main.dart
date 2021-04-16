@@ -8,6 +8,9 @@ void main() {
   ));
 }
 
+double H = 1920;
+double W = 1080;
+
 class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -35,21 +38,21 @@ class Main extends StatelessWidget {
                     fit: BoxFit.cover
                 )
             ),
-              child: Stack(
+            child: Stack(
                 children: [
                   BackdropFilter(
-                  filter: ImageFilter.blur(
-                    sigmaX: 3.5,
-                    sigmaY: 3.5,
+                    filter: ImageFilter.blur(
+                      sigmaX: 3.5,
+                      sigmaY: 3.5,
+                    ),
+                    child: Container(
+                      color: Colors.black.withOpacity(0.27),
+                    ),
                   ),
-                  child: Container(
-                    color: Colors.black.withOpacity(0.27),
-                  ),
-                ),
                   Column(
                     children: [
                       SizedBox(
-                        height: 10,
+                        height: (20/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,
                       ),
                       Row(
                         children: [
@@ -72,43 +75,44 @@ class Main extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(height: (10/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           IconButton(
-                              icon: Icon(Icons.email_outlined),
-                              onPressed: () {},
-                              iconSize: 34,
-                              color: Colors.white,
+                            icon: Icon(Icons.email_outlined),
+                            onPressed: () {},
+                            iconSize: 34,
+                            color: Colors.white,
                             tooltip: 'Mail',
                           ),
-                          SizedBox(width: 30,),
+                          SizedBox(width: (30/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
                           Stack(
                             clipBehavior: Clip.none,
                             children: [
-                            CircleAvatar(
-                              backgroundImage: AssetImage('asset\\prof - 5.png'),
-                              radius: 70,
-                            ),
+                              CircleAvatar(
+                                backgroundImage: AssetImage('asset\\prof - 5.png'),
+                                radius: 70,
+                                //TODO: portability
+                              ),
                               Positioned(
                                 bottom: -10,
                                 right: -10,
                                 child: FloatingActionButton(
-                                    onPressed: () {},
+                                  onPressed: () {},
                                   mini: true,
                                   tooltip: 'Change Profile Picture',
                                   child: Icon(
-                                      Icons.photo_camera,
+                                    Icons.photo_camera,
                                     size: 20,
                                   ),
                                   backgroundColor: Colors.transparent,
                                   foregroundColor: Colors.white,
                                 ),
                               ),
-                           ],
+                            ],
                           ),
-                          SizedBox(width: 30,),
+                          SizedBox(width: (30/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
                           IconButton(
                             icon: Icon(Icons.add_circle_outline_sharp),
                             onPressed: () {},
@@ -118,21 +122,21 @@ class Main extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 20,),
+                      SizedBox(height: (20/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                              'Han Solo',
+                            'Han Solo',
                             style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold
+                                color: Colors.white,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(height: (10/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -143,7 +147,7 @@ class Main extends StatelessWidget {
                           ),
                           SizedBox(width: 4,),
                           Text(
-                              'Tatooine',
+                            'Tatooine',
                             style: TextStyle(
                               color: Colors.white60,
                               fontSize: 16,
@@ -153,97 +157,99 @@ class Main extends StatelessWidget {
                       ),
                       Divider(
                         color: Colors.white,
-                        height: 16,
-                        indent: 20,
-                        endIndent: 20,
+                        height: (25/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,
+                        indent: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,
+                        endIndent: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,
                       ),
                       IntrinsicHeight(
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
+                          padding: EdgeInsets.fromLTRB((60/(W * 0.5))*MediaQuery.of(context).size.width * 0.5, 0, (60/(W * 0.5))*MediaQuery.of(context).size.width * 0.5, 0),
+                          child: Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
                                       '33k',
-                                    style: TextStyle(
-                                      fontSize: 23,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
+                                      style: TextStyle(
+                                        fontSize: 23,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                  Text(
-                                    'Followers',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
-                                      //fontWeight: FontWeight.bold,
+                                    Text(
+                                      'Followers',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                        //fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              VerticalDivider(
-                                color: Colors.white,
-                              ),
-                              Spacer(),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    '2398',
-                                    style: TextStyle(
-                                      fontSize: 23,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
+                                  ],
+                                ),
+                                Spacer(),
+                                VerticalDivider(
+                                  color: Colors.white,
+                                ),
+                                Spacer(),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      '2398',
+                                      style: TextStyle(
+                                        fontSize: 23,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                  Text(
+                                    Text(
                                       'Following',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
-                                      //fontWeight: FontWeight.bold,
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                        //fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              VerticalDivider(
-                                color: Colors.white,
-                              ),
-                              Spacer(),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    '204',
-                                    style: TextStyle(
-                                      fontSize: 23,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
+                                  ],
+                                ),
+                                Spacer(),
+                                VerticalDivider(
+                                  color: Colors.white,
+                                ),
+                                Spacer(),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      '204',
+                                      style: TextStyle(
+                                        fontSize: 23,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                  Text(
-                                    'Photos',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
-                                      //fontWeight: FontWeight.bold,
+                                    Text(
+                                      'Photos',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                        //fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       )
                     ],
                   ),
                 ]
-              ),
+            ),
           ),
           Expanded(
             child: Container(
@@ -265,7 +271,7 @@ class Main extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              width: 5,
+                              width: (7/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,
                             ),
                             Text(
                               'About Me',
@@ -282,7 +288,7 @@ class Main extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                              'Hi!\nI am a general \u{1f396} in the Resistance Movement (alteast in the days of the Empire).\nI pilot the Millenium falcon \u{1f680}.\n\u{1f44b} Welcome to my page!',
+                            'Hi!\nI am a general \u{1f396} in the Resistance Movement (alteast in the days of the Empire).\nI pilot the Millenium falcon \u{1f680}.\n\u{1f44b} Welcome to my page!',
                             style: TextStyle(
                               fontSize: 20,
                             ),
@@ -291,7 +297,7 @@ class Main extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: (20/(W * 0.5))*MediaQuery.of(context).size.height * 0.5,),
                   Container(
                     color: Colors.white,
                     child: Column(
@@ -307,7 +313,7 @@ class Main extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              width: 5,
+                              width: (7/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,
                             ),
                             Text(
                               'Popular',
@@ -320,49 +326,49 @@ class Main extends StatelessWidget {
                         ),
                         Divider(),
                         SizedBox(
-                          height: 200,
+                          height: (250/(W * 0.5))*MediaQuery.of(context).size.height * 0.5,
                           child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: [
-                              Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              scrollDirection: Axis.horizontal,
                               children: [
-                                SizedBox(width: 10,),
-                                Image(
-                                  image: NetworkImage('https://imgix.bustle.com/uploads/image/2018/5/21/f0fbced7-d13a-4900-9da4-fab47eceaeeb-151204_bb_han-solojpgcroppromo-xlarge2.jpg?w=970&h=546&fit=crop&crop=faces&auto=format&q=70'),
-                                ),
-                                SizedBox(width: 10,),
-                                Image(
-                                  image: NetworkImage('https://3.bp.blogspot.com/-YsKAxgt4T3g/U-7erCEZBdI/AAAAAAAAEvM/l96CzkzEGSo/s1600/starwarschewbacca-dan-han-solo-ikon-dalam-film-star-wars094.jpeg'),
-                                ),
-                                SizedBox(width: 10,),
-                                Image(
-                                  image: NetworkImage('https://i.pinimg.com/originals/83/39/38/833938b2349c01fdcf4fab6c431abe42.jpg'),
-                                ),
-                                SizedBox(width: 10,),
-                                Image(
-                                  image: NetworkImage('https://2.bp.blogspot.com/-sJnXoZSF35c/UoBuQWViM5I/AAAAAAAA0eY/Yj7or79m-60/s1600/1-2-star-wars-impero-colpisce-ancora-trivia.jpg'),
-                                ),
-                                SizedBox(width: 10,),
-                                Image(
-                                  image: NetworkImage('https://1.bp.blogspot.com/-GI_hMV08Tck/UoB7Q3k1R_I/AAAAAAAA0kU/VXDDC4zyNOg/s1600/41-1-star-wars-impero-colpisce-ancora-trivia.jpg'),
-                                ),
-                                SizedBox(width: 10,),
-                                ElevatedButton(
-                                    onPressed: () {},
-                                    child: Text(
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(width: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
+                                    Image(
+                                      image: NetworkImage('https://imgix.bustle.com/uploads/image/2018/5/21/f0fbced7-d13a-4900-9da4-fab47eceaeeb-151204_bb_han-solojpgcroppromo-xlarge2.jpg?w=970&h=546&fit=crop&crop=faces&auto=format&q=70'),
+                                    ),
+                                    SizedBox(width: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
+                                    Image(
+                                      image: NetworkImage('https://3.bp.blogspot.com/-YsKAxgt4T3g/U-7erCEZBdI/AAAAAAAAEvM/l96CzkzEGSo/s1600/starwarschewbacca-dan-han-solo-ikon-dalam-film-star-wars094.jpeg'),
+                                    ),
+                                    SizedBox(width: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
+                                    Image(
+                                      image: NetworkImage('https://i.pinimg.com/originals/83/39/38/833938b2349c01fdcf4fab6c431abe42.jpg'),
+                                    ),
+                                    SizedBox(width: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
+                                    Image(
+                                      image: NetworkImage('https://2.bp.blogspot.com/-sJnXoZSF35c/UoBuQWViM5I/AAAAAAAA0eY/Yj7or79m-60/s1600/1-2-star-wars-impero-colpisce-ancora-trivia.jpg'),
+                                    ),
+                                    SizedBox(width: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
+                                    Image(
+                                      image: NetworkImage('https://1.bp.blogspot.com/-GI_hMV08Tck/UoB7Q3k1R_I/AAAAAAAA0kU/VXDDC4zyNOg/s1600/41-1-star-wars-impero-colpisce-ancora-trivia.jpg'),
+                                    ),
+                                    SizedBox(width: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
+                                    ElevatedButton(
+                                      onPressed: () {},
+                                      child: Text(
                                         'View All \u{2192}',
-                                      style: TextStyle(
-                                        color: Colors.white60,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      style: ButtonStyle(
+                                        backgroundColor: MaterialStateProperty.all<Color>(Colors.blueGrey),
                                       ),
                                     ),
-                                  style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.blueGrey),
-                                  ),
+                                  ],
                                 ),
-                              ],
-                            ),
-                            ]
+                              ]
                           ),
                         ),
                       ],
