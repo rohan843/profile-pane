@@ -157,7 +157,7 @@ class Main extends StatelessWidget {
                       ),
                       Divider(
                         color: Colors.white,
-                        height: (25/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,
+                        height: (100/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,
                         indent: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,
                         endIndent: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,
                       ),
