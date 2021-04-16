@@ -3,7 +3,8 @@
 This is a new Flutter application project.\
 Its aim is to create a profile pane which looks appealing.
 
->Please use only portrait mode
+>Please use only portrait mode\
+>Please have an internet connection, as some pics are network images, to reduce the size of the apk
 >
 
 ## ScreenShots
