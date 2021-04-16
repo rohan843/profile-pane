@@ -18,7 +18,8 @@ class Main extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 400.0,
+              //height: 400.0,
+              height: MediaQuery.of(context).size.height * 0.5,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('asset\\millenium falcon.png'),
@@ -63,7 +64,7 @@ class Main extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(height: 30,),
+                        SizedBox(height: 10,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -142,11 +143,94 @@ class Main extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-
-                          ],
+                        Divider(
+                          color: Colors.white,
+                          height: 16,
+                          indent: 20,
+                          endIndent: 20,
+                        ),
+                        IntrinsicHeight(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                        '33k',
+                                      style: TextStyle(
+                                        fontSize: 23,
+                                        color: Colors.white70,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Followers',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white70,
+                                        //fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Spacer(),
+                                VerticalDivider(
+                                  color: Colors.white,
+                                ),
+                                Spacer(),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      '2398',
+                                      style: TextStyle(
+                                        fontSize: 23,
+                                        color: Colors.white70,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                        'Following',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white70,
+                                        //fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Spacer(),
+                                VerticalDivider(
+                                  color: Colors.white,
+                                ),
+                                Spacer(),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      '204',
+                                      style: TextStyle(
+                                        fontSize: 23,
+                                        color: Colors.white70,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Photos',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white70,
+                                        //fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                         )
                       ],
                     ),
