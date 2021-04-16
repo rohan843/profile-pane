@@ -11,6 +11,15 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home_outlined),  label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.explore_outlined),  label: 'Explore'),
+          BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: 'Profile'),
+        ],
+        currentIndex: 2,
+        backgroundColor: Colors.white,
+      ),
       backgroundColor: Colors.black87,
       body: Padding(
         padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
