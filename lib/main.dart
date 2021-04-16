@@ -164,85 +164,83 @@ class Main extends StatelessWidget {
                       IntrinsicHeight(
                         child: Padding(
                           padding: EdgeInsets.fromLTRB((60/(W * 0.5))*MediaQuery.of(context).size.width * 0.5, 0, (60/(W * 0.5))*MediaQuery.of(context).size.width * 0.5, 0),
-                          child: Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      '33k',
-                                      style: TextStyle(
-                                        fontSize: 23,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    '33k',
+                                    style: TextStyle(
+                                      fontSize: 23,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      'Followers',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                        //fontWeight: FontWeight.bold,
-                                      ),
+                                  ),
+                                  Text(
+                                    'Followers',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      //fontWeight: FontWeight.bold,
                                     ),
-                                  ],
-                                ),
-                                Spacer(),
-                                VerticalDivider(
-                                  color: Colors.white,
-                                ),
-                                Spacer(),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      '2398',
-                                      style: TextStyle(
-                                        fontSize: 23,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                  ),
+                                ],
+                              ),
+                              Spacer(),
+                              VerticalDivider(
+                                color: Colors.white,
+                              ),
+                              Spacer(),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    '2398',
+                                    style: TextStyle(
+                                      fontSize: 23,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      'Following',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                        //fontWeight: FontWeight.bold,
-                                      ),
+                                  ),
+                                  Text(
+                                    'Following',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      //fontWeight: FontWeight.bold,
                                     ),
-                                  ],
-                                ),
-                                Spacer(),
-                                VerticalDivider(
-                                  color: Colors.white,
-                                ),
-                                Spacer(),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      '204',
-                                      style: TextStyle(
-                                        fontSize: 23,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                  ),
+                                ],
+                              ),
+                              Spacer(),
+                              VerticalDivider(
+                                color: Colors.white,
+                              ),
+                              Spacer(),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    '204',
+                                    style: TextStyle(
+                                      fontSize: 23,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      'Photos',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                        //fontWeight: FontWeight.bold,
-                                      ),
+                                  ),
+                                  Text(
+                                    'Photos',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      //fontWeight: FontWeight.bold,
                                     ),
-                                  ],
-                                ),
-                              ],
-                            ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       )
