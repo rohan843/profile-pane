@@ -57,7 +57,7 @@ class Main extends StatelessWidget {
                             onPressed: () {},
                             icon: Icon(Icons.menu),
                             iconSize: 30,
-                            color: Colors.white70,
+                            color: Colors.white,
                             tooltip: 'Menu',
                           ),
                           Spacer(
@@ -67,7 +67,7 @@ class Main extends StatelessWidget {
                             onPressed: () {},
                             icon: Icon(Icons.settings_outlined),
                             iconSize: 30,
-                            color: Colors.white70,
+                            color: Colors.white,
                             tooltip: 'Settings',
                           ),
                         ],
@@ -80,7 +80,7 @@ class Main extends StatelessWidget {
                               icon: Icon(Icons.email_outlined),
                               onPressed: () {},
                               iconSize: 34,
-                              color: Colors.white70,
+                              color: Colors.white,
                             tooltip: 'Mail',
                           ),
                           SizedBox(width: 30,),
@@ -113,7 +113,7 @@ class Main extends StatelessWidget {
                             icon: Icon(Icons.add_circle_outline_sharp),
                             onPressed: () {},
                             iconSize: 34,
-                            color: Colors.white70,
+                            color: Colors.white,
                             tooltip: 'Add Image',
                           ),
                         ],
@@ -125,7 +125,7 @@ class Main extends StatelessWidget {
                           Text(
                               'Han Solo',
                             style: TextStyle(
-                              color: Colors.white70,
+                              color: Colors.white,
                               fontSize: 25,
                               fontWeight: FontWeight.bold
                             ),
@@ -170,7 +170,7 @@ class Main extends StatelessWidget {
                                       '33k',
                                     style: TextStyle(
                                       fontSize: 23,
-                                      color: Colors.white70,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -178,7 +178,7 @@ class Main extends StatelessWidget {
                                     'Followers',
                                     style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.white70,
+                                      color: Colors.white,
                                       //fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -196,7 +196,7 @@ class Main extends StatelessWidget {
                                     '2398',
                                     style: TextStyle(
                                       fontSize: 23,
-                                      color: Colors.white70,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -204,7 +204,7 @@ class Main extends StatelessWidget {
                                       'Following',
                                     style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.white70,
+                                      color: Colors.white,
                                       //fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -222,7 +222,7 @@ class Main extends StatelessWidget {
                                     '204',
                                     style: TextStyle(
                                       fontSize: 23,
-                                      color: Colors.white70,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -230,7 +230,7 @@ class Main extends StatelessWidget {
                                     'Photos',
                                     style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.white70,
+                                      color: Colors.white,
                                       //fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -346,6 +346,19 @@ class Main extends StatelessWidget {
                                 SizedBox(width: 10,),
                                 Image(
                                   image: NetworkImage('https://1.bp.blogspot.com/-GI_hMV08Tck/UoB7Q3k1R_I/AAAAAAAA0kU/VXDDC4zyNOg/s1600/41-1-star-wars-impero-colpisce-ancora-trivia.jpg'),
+                                ),
+                                SizedBox(width: 10,),
+                                ElevatedButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                        'View All \u{2192}',
+                                      style: TextStyle(
+                                        color: Colors.white60,
+                                      ),
+                                    ),
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.blueGrey),
+                                  ),
                                 ),
                               ],
                             ),
