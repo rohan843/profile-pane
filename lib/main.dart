@@ -30,7 +30,7 @@ class Main extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             //height: 400.0,
-            height: MediaQuery.of(context).size.height * 0.5,
+            height: MediaQuery.of(context).size.height * 0.52,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('asset\\millenium falcon.png'),
@@ -49,202 +49,204 @@ class Main extends StatelessWidget {
                       color: Colors.black.withOpacity(0.27),
                     ),
                   ),
-                  Column(
-                    children: [
-                      SizedBox(
-                        height: (20/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.menu),
-                            iconSize: 30,
-                            color: Colors.white,
-                            tooltip: 'Menu',
-                          ),
-                          Spacer(
-                            flex:1,
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.settings_outlined),
-                            iconSize: 30,
-                            color: Colors.white,
-                            tooltip: 'Settings',
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: (10/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          IconButton(
-                            icon: Icon(Icons.email_outlined),
-                            onPressed: () {},
-                            iconSize: 34,
-                            color: Colors.white,
-                            tooltip: 'Mail',
-                          ),
-                          SizedBox(width: (30/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
-                          Stack(
-                            clipBehavior: Clip.none,
-                            children: [
-                              CircleAvatar(
-                                backgroundImage: AssetImage('asset\\prof - 5.png'),
-                                radius: 70,
-                                //TODO: portability
-                              ),
-                              Positioned(
-                                bottom: -10,
-                                right: -10,
-                                child: FloatingActionButton(
-                                  onPressed: () {},
-                                  mini: true,
-                                  tooltip: 'Change Profile Picture',
-                                  child: Icon(
-                                    Icons.photo_camera,
-                                    size: 20,
-                                  ),
-                                  backgroundColor: Colors.transparent,
-                                  foregroundColor: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(width: (30/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
-                          IconButton(
-                            icon: Icon(Icons.add_circle_outline_sharp),
-                            onPressed: () {},
-                            iconSize: 34,
-                            color: Colors.white,
-                            tooltip: 'Add Image',
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: (20/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Han Solo',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold
+                  SafeArea(
+                    child: Column(
+                      children: [
+                        // SizedBox(
+                        //   height: (20/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,
+                        // ),
+                        Row(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(Icons.menu),
+                              iconSize: 30,
+                              color: Colors.white,
+                              tooltip: 'Menu',
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: (10/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.location_on_outlined,
-                            color: Colors.white60,
-                            size: 16,
-                          ),
-                          SizedBox(width: 4,),
-                          Text(
-                            'Tatooine',
-                            style: TextStyle(
-                              color: Colors.white60,
-                              fontSize: 16,
+                            Spacer(
+                              flex:1,
                             ),
-                          ),
-                        ],
-                      ),
-                      Divider(
-                        color: Colors.white,
-                        height: (100/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,
-                        indent: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,
-                        endIndent: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,
-                      ),
-                      IntrinsicHeight(
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB((60/(W * 0.5))*MediaQuery.of(context).size.width * 0.5, 0, (60/(W * 0.5))*MediaQuery.of(context).size.width * 0.5, 0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    '33k',
-                                    style: TextStyle(
-                                      fontSize: 23,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Followers',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
-                                      //fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              VerticalDivider(
-                                color: Colors.white,
-                              ),
-                              Spacer(),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    '2398',
-                                    style: TextStyle(
-                                      fontSize: 23,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Following',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
-                                      //fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              VerticalDivider(
-                                color: Colors.white,
-                              ),
-                              Spacer(),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    '204',
-                                    style: TextStyle(
-                                      fontSize: 23,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Photos',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
-                                      //fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(Icons.settings_outlined),
+                              iconSize: 30,
+                              color: Colors.white,
+                              tooltip: 'Settings',
+                            ),
+                          ],
                         ),
-                      )
-                    ],
+                        SizedBox(height: (10/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: Icon(Icons.email_outlined),
+                              onPressed: () {},
+                              iconSize: 34,
+                              color: Colors.white,
+                              tooltip: 'Mail',
+                            ),
+                            SizedBox(width: (30/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
+                            Stack(
+                              clipBehavior: Clip.none,
+                              children: [
+                                CircleAvatar(
+                                  backgroundImage: AssetImage('asset\\prof - 5.png'),
+                                  radius: 70,
+                                  //TODO: portability
+                                ),
+                                Positioned(
+                                  bottom: -10,
+                                  right: -10,
+                                  child: FloatingActionButton(
+                                    onPressed: () {},
+                                    mini: true,
+                                    tooltip: 'Change Profile Picture',
+                                    child: Icon(
+                                      Icons.photo_camera,
+                                      size: 20,
+                                    ),
+                                    backgroundColor: Colors.transparent,
+                                    foregroundColor: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(width: (30/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,),
+                            IconButton(
+                              icon: Icon(Icons.add_circle_outline_sharp),
+                              onPressed: () {},
+                              iconSize: 34,
+                              color: Colors.white,
+                              tooltip: 'Add Image',
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: (20/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Han Solo',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: (10/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.location_on_outlined,
+                              color: Colors.white60,
+                              size: 16,
+                            ),
+                            SizedBox(width: 4,),
+                            Text(
+                              'Tatooine',
+                              style: TextStyle(
+                                color: Colors.white60,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Divider(
+                          color: Colors.white,
+                          height: (100/(H * 0.5))*MediaQuery.of(context).size.height * 0.5,
+                          indent: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,
+                          endIndent: (25/(W * 0.5))*MediaQuery.of(context).size.width * 0.5,
+                        ),
+                        IntrinsicHeight(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB((60/(W * 0.5))*MediaQuery.of(context).size.width * 0.5, 0, (60/(W * 0.5))*MediaQuery.of(context).size.width * 0.5, 0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      '33k',
+                                      style: TextStyle(
+                                        fontSize: 23,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Followers',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                        //fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Spacer(),
+                                VerticalDivider(
+                                  color: Colors.white,
+                                ),
+                                Spacer(),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      '2398',
+                                      style: TextStyle(
+                                        fontSize: 23,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Following',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                        //fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Spacer(),
+                                VerticalDivider(
+                                  color: Colors.white,
+                                ),
+                                Spacer(),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      '204',
+                                      style: TextStyle(
+                                        fontSize: 23,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Photos',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                        //fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ]
             ),
